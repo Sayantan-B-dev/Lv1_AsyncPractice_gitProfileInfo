@@ -1,12 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-[#07090d] min-h-screen">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>GitYou</title>
+    <style>
+        /* Neon glow effect for minimal glowing */
+        .neon-glow {
+            box-shadow: 0 0 8px 2px #00fff7, 0 0 2px 0 #fff;
+        }
+        .neon-border {
+            border: 1.5px solid #fff;
+            box-shadow: 0 0 8px 0 #00fff7, 0 0 2px 0 #fff;
+        }
+        .neon-text {
+            text-shadow: 0 0 6px #00fff7, 0 0 2px #fff;
+        }
+        .neon-hr {
+            border: none;
+            border-top: 1.5px solid #fff;
+            box-shadow: 0 0 6px #00fff7;
+        }
+        .neon-input:focus {
+            box-shadow: 0 0 8px 2px #00fff7;
+            border-color: #fff;
+        }
+        .neon-btn {
+            box-shadow: 0 0 8px 2px #00fff7;
+            border: 1.5px solid #fff;
+            background: #07090d;
+        }
+        .neon-btn:hover {
+            box-shadow: 0 0 16px 4px #00fff7;
+            background: #0a0d13;
+        }
+    </style>
 </head>
-<body>
-    
+<body class="min-h-screen flex items-center justify-center font-mono text-white bg-[#07090d]">
+    <div class="w-full max-w-md mx-[20px] my-auto p-8 rounded-3xl neon-border neon-glow bg-[#0a0d13]">
+        <h1 class="text-3xl font-extrabold text-white tracking-widest text-center mb-8 select-none neon-text">
+            <span class="neon-text">GitYou</span>
+        </h1>
+        <form id="github-form" class="flex items-center gap-2 mb-8">
+            <input
+                type="text"
+                id="usernameInp"
+                name="username"
+                placeholder="Enter GitHub username"
+                autocomplete="off"
+                class="flex-1 px-4 py-2 rounded-lg bg-[#0a0d13] neon-border text-white placeholder-white/60 transition neon-input"
+            />
+            <button
+                id="searchBtn"
+                type="submit"
+                class="px-5 py-2 rounded-lg neon-btn text-white font-bold transition-all duration-200"
+            >
+                Search
+            </button>
+        </form>
+        <hr class="my-6 neon-hr">
+        <div id="user-info" class="relative group transition-all duration-300">
+
+        </div>
+    </div>
     <script src="./script.js"></script>
 </body>
 </html>
