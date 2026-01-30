@@ -28,6 +28,10 @@ asyncJs/
 
 No build tools or server required—everything runs in the browser!
 
+![](./1.png)
+![](./2.png)
+
+
 ## Customization
 - You can style the UI further using Tailwind classes in `index.html`
 - To extend functionality (e.g., show user repos), modify `script.js`
